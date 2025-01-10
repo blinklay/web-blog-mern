@@ -1,0 +1,12 @@
+:root {
+  --color-background: #212121;
+  --color-text: #fff;
+}
+
+body {
+  font-family: "Roboto", serif;
+  line-height: 1.2;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-size: 18px;
+}
