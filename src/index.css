@@ -1,4 +1,5 @@
 :root {
+  --color-background-header: #141414;
   --color-background: #212121;
   --color-text: #fff;
 }
@@ -9,4 +10,15 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
