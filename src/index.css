@@ -2,6 +2,7 @@
   --color-background-header: #141414;
   --color-background: #212121;
   --color-text: #fff;
+  --color-accent: #7b71c6;
 }
 
 body {
@@ -21,4 +22,10 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
 }
