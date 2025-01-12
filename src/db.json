@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "_id": 0,
+      "title": "New Post",
+      "description": "Lorem lorem",
+      "imageUrl": "https://i.imgur.com/qZrYQzS.jpeg",
+      "authorId": 2
+    }
+  ],
+  "users": [
+    {
+      "_id": 2,
+      "email": "blinklay@gmail.com",
+      "login": "blinklay",
+      "password": "123qwe",
+      "avatarUrl": "https://i.imgur.com/DdRmj8S.jpeg"
+    }
+  ]
+}
