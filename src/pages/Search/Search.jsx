@@ -1,9 +1,9 @@
 import H1 from "../../components/H1/H1";
 
-export default function HomePage() {
+export default function Search() {
   return (
     <div>
-      <H1>Главная</H1>
+      <H1>Поиск</H1>
     </div>
   );
 }

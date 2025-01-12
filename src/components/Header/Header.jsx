@@ -42,7 +42,7 @@ const Logo = styled(Link)`
 `;
 
 export default function Header() {
-  const auth = true;
+  const auth = false;
 
   return (
     <StyledHeader>
@@ -54,14 +54,14 @@ export default function Header() {
 
           <List>
             <Item>
-              <StyledNavLink>
+              <StyledNavLink to="/search">
                 <Icon src="./public/icons/search.png" alt="search icon" />
                 Поиск
               </StyledNavLink>
             </Item>
 
             <Item>
-              <StyledNavLink>
+              <StyledNavLink to="/post-create">
                 <Icon src="./public/icons/pen.png" alt="pen icon" />
                 Написать статью
               </StyledNavLink>
