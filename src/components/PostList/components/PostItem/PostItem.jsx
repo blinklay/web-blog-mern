@@ -30,9 +30,9 @@ const PostInfo = styled.div`
 
 const Description = styled.div``;
 
-export default function PostItem({ title, imageUrl, description }) {
+export default function PostItem({ _id, title, imageUrl, description }) {
   return (
-    <Item>
+    <Item to={`/post/${_id}`}>
       <Image src={imageUrl} alt="post image" />
 
       <PostInfo>

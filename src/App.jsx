@@ -5,6 +5,7 @@ import Profile from "./pages/Profile/Profile";
 import Search from "./pages/Search/Search";
 import CreatePost from "./pages/CreatePost/CreatePost";
 import Login from "./pages/Login/Login";
+import SinglePost from "./pages/SinglePost/SinglePost";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/post-create" element={<CreatePost />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/post/:id" element={<SinglePost />} />
         </Route>
       </Routes>
     </>
