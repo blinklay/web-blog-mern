@@ -9,11 +9,11 @@ const Title = styled.h2`
   margin-bottom: 20px;
 `;
 
-export default function Result({ posts }) {
+export default function Result({ posts, isLoading }) {
   return (
     <Wrapper>
       <Title>Результаты поиска:</Title>
-      <PostList posts={posts} />
+      <PostList posts={posts} isLoading={isLoading} />
     </Wrapper>
   );
 }

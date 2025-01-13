@@ -3,8 +3,7 @@ import styled from "styled-components";
 import EnterLink from "../EnterLink/EnterLink";
 import Container from "../Container/Container";
 import User from "./components/User/User";
-import { server } from "../../bff/server";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const StyledHeader = styled.header`
   background-color: var(--color-background-header);

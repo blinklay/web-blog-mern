@@ -38,7 +38,13 @@ export default function Search() {
     fetch("http://localhost:3000/posts")
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data.filter((post) => post.title.includes(searchValue)));
+        setPosts(
+          data.filter(
+            (post) =>
+              post.title.includes(searchValue) ||
+              post.description.includes(searchValue)
+          )
+        );
       })
       .finally(() => setIsLoading(false));
   };
@@ -57,11 +63,7 @@ export default function Search() {
         <Button>поиск</Button>
       </SearchForm>
 
-      {isLoading && <Loader />}
-      {!isLoading && posts.length === 0 && (
-        <div>По вашему запросу ничего не найдено!</div>
-      )}
-      {!isLoading && posts.length !== 0 && <Result posts={posts} />}
+      <Result posts={posts} isLoading={isLoading} />
     </div>
   );
 }

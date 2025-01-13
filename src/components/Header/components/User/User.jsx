@@ -38,7 +38,14 @@ export default function User() {
   return (
     <Wrapper>
       <UserLink to="/profile">
-        <Icon src={avatarUrl} alt="user icon" />
+        <Icon
+          src={avatarUrl}
+          alt="user icon"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "./icons/user.png";
+          }}
+        />
       </UserLink>
 
       <LeaveButton onClick={logout}>Выйти</LeaveButton>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import PostItem from "./components/PostItem/PostItem";
+import Skeleton from "../Skeleton/Skeleton";
 
 const List = styled.div`
   display: grid;
@@ -9,12 +10,12 @@ const List = styled.div`
   gap: 20px;
 `;
 
-export default function PostList({ posts }) {
+export default function PostList({ posts, isLoading }) {
   return (
     <List>
-      {posts.map((item) => (
-        <PostItem key={item.id} {...item} />
-      ))}
+      {!isLoading && posts.map((item) => <PostItem key={item.id} {...item} />)}
+      {isLoading &&
+        new Array(3).fill().map((_, index) => <Skeleton key={index} />)}
     </List>
   );
 }

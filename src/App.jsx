@@ -17,7 +17,11 @@ function App() {
     const isUserAuth = server.checkAuth();
 
     if (isUserAuth) {
-      fetch(`http://localhost:3000/users/${isUserAuth}`)
+      fetch(
+        `http://localhost:3000/users/${JSON.parse(
+          localStorage.getItem("userId")
+        )}`
+      )
         .then((res) => res.json())
         .then((data) => {
           dispatch({ type: "SET_USER", payload: data });
