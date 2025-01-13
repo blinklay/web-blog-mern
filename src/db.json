@@ -1,20 +1,46 @@
 {
   "posts": [
     {
-      "_id": 0,
-      "title": "New Post",
-      "description": "Lorem lorem",
-      "imageUrl": "https://i.imgur.com/qZrYQzS.jpeg",
+      "id": 1,
+      "title": "Post One",
+      "description": "This is the description for the first post.",
+      "imageUrl": "https://img.freepik.com/free-photo/pink-cherry-blossom-flowers-blooming-tree_181624-22030.jpg?ga=GA1.1.957954942.1736775563&semt=ais_hybrid",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Post Two",
+      "description": "This is the description for the second post.",
+      "imageUrl": "https://cdn-cm.freepik.com/previews/55bfae5b-8cfc-4c36-8a81-45e447c33e48.jpg?token=exp=1736776827~hmac=159dab1946476501f722290759b4c8632fa3f7006abc265b95d9b08616ed48ef",
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "title": "Post Three",
+      "description": "This is the description for the third post.",
+      "imageUrl": "https://img.freepik.com/free-photo/minimal-abstract-shape-design_1017-31023.jpg",
+      "authorId": 1
+    },
+    {
+      "id": 4,
+      "title": "Post Four",
+      "description": "This is the description for the fourth post.",
+      "imageUrl": "https://img.freepik.com/free-photo/3d-rendered-abstract-background_1220-347.jpg",
+      "authorId": 3
+    },
+    {
+      "id": 5,
+      "title": "Post Five",
+      "description": "This is the description for the fifth post.",
+      "imageUrl": "https://cdn-cm.freepik.com/previews/55bfae5b-8cfc-4c36-8a81-45e447c33e48.jpg?token=exp=1736776827~hmac=159dab1946476501f722290759b4c8632fa3f7006abc265b95d9b08616ed48ef",
       "authorId": 2
     }
   ],
   "users": [
     {
-      "_id": 2,
-      "email": "blinklay@gmail.com",
-      "login": "blinklay",
-      "password": "123qwe",
-      "avatarUrl": "https://i.imgur.com/DdRmj8S.jpeg"
+      "id": 1,
+      "email": "pavel@mail.org",
+      "password": "123qwe"
     }
   ]
 }

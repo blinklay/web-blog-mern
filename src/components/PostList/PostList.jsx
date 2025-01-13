@@ -23,7 +23,7 @@ export default function PostList() {
   return (
     <List>
       {posts.map((item) => (
-        <PostItem key={item._id} {...item} />
+        <PostItem key={item.id} {...item} />
       ))}
     </List>
   );

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import EnterLink from "../EnterLink/EnterLink";
 import Container from "../Container/Container";
 import User from "./components/User/User";
+import { server } from "../../bff/server";
+import { useDispatch, useSelector } from "react-redux";
 
 const StyledHeader = styled.header`
   background-color: var(--color-background-header);
@@ -42,7 +44,7 @@ const Logo = styled(Link)`
 `;
 
 export default function Header() {
-  const auth = false;
+  const currentUser = useSelector((user) => user);
 
   return (
     <StyledHeader>
@@ -68,7 +70,7 @@ export default function Header() {
             </Item>
           </List>
 
-          {auth ? <User /> : <EnterLink to="/login">Войти</EnterLink>}
+          {currentUser ? <User /> : <EnterLink to="/login">Войти</EnterLink>}
         </Wrapper>
       </Container>
     </StyledHeader>

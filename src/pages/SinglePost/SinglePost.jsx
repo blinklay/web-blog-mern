@@ -18,10 +18,10 @@ export default function SinglePost() {
   const [post, setPost] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:3000/posts`)
+    fetch(`http://localhost:3000/posts/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setPost(data.find(({ _id }) => _id === Number(id)));
+        setPost(data);
       });
   }, []);
 

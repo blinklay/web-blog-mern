@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -24,13 +25,17 @@ const LeaveButton = styled.button`
 `;
 
 export default function User() {
+  const dispatch = useDispatch();
+
+  const logout = () => [dispatch({ type: "SET_USER", payload: null })];
+
   return (
     <Wrapper>
       <UserLink to="/profile">
         <Icon src="./public/icons/user.png" alt="user icon" />
       </UserLink>
 
-      <LeaveButton>Выйти</LeaveButton>
+      <LeaveButton onClick={logout}>Выйти</LeaveButton>
     </Wrapper>
   );
 }
