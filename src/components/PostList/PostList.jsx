@@ -9,17 +9,7 @@ const List = styled.div`
   gap: 20px;
 `;
 
-export default function PostList() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        setPosts(data);
-      });
-  }, []);
-
+export default function PostList({ posts }) {
   return (
     <List>
       {posts.map((item) => (
