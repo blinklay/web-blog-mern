@@ -12,6 +12,10 @@ export const server = {
       throw new Error("400 | Логин или пароль не верны!");
     }
 
+    localStorage.setItem("userId", JSON.stringify(currentUser.id))
     return currentUser;
+  },
+  checkAuth() {
+    return !!JSON.parse(localStorage.getItem("userId"))
   }
 }

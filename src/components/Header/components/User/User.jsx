@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -15,6 +15,8 @@ const UserLink = styled(Link)`
 
 const Icon = styled.img`
   width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 `;
 
 const LeaveButton = styled.button`
@@ -26,13 +28,17 @@ const LeaveButton = styled.button`
 
 export default function User() {
   const dispatch = useDispatch();
+  const avatarUrl = useSelector((user) => user.avatarUrl);
 
-  const logout = () => [dispatch({ type: "SET_USER", payload: null })];
+  const logout = () => {
+    localStorage.removeItem("userId");
+    dispatch({ type: "SET_USER", payload: null });
+  };
 
   return (
     <Wrapper>
       <UserLink to="/profile">
-        <Icon src="./public/icons/user.png" alt="user icon" />
+        <Icon src={avatarUrl} alt="user icon" />
       </UserLink>
 
       <LeaveButton onClick={logout}>Выйти</LeaveButton>

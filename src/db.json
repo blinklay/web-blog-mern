@@ -40,7 +40,8 @@
     {
       "id": 1,
       "email": "pavel@mail.org",
-      "password": "123qwe"
+      "password": "123qwe",
+      "avatarUrl": "https://cdn-cm.freepik.com/previews/4547644c-75de-46eb-986f-ac4dbf5ba641.jpg?token=exp=1736780882~hmac=6091ff95e7d9a28da705296b60913f4306c5c726d338c508873e22506a6dc86d"
     }
   ]
 }

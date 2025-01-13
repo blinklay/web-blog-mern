@@ -6,8 +6,25 @@ import Search from "./pages/Search/Search";
 import CreatePost from "./pages/CreatePost/CreatePost";
 import Login from "./pages/Login/Login";
 import SinglePost from "./pages/SinglePost/SinglePost";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { server } from "./bff/server";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const isUserAuth = server.checkAuth();
+
+    if (isUserAuth) {
+      fetch(`http://localhost:3000/users/${isUserAuth}`)
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch({ type: "SET_USER", payload: data });
+        });
+    }
+  }, []);
+
   return (
     <>
       <Routes>
